@@ -193,8 +193,8 @@ class ReBoatDigitalBrain:
         self.capex_amortization_years = 10
 
         self.capex_financing_scenarios = {
-            "EU_Grants": {"name": "Horizon Europe Grant Funding",
-                          "description": "70% EU grant coverage, 30% consortium/regional co-financing",
+            "EU_Grants": {"name": "EU / Regional Public Grant (ERDF / Cohesion / LIFE)",
+                          "description": "70% EU or regional capital grant (e.g., ERDF, Cohesion Fund, LIFE), 30% operator/regional co-financing",
                           "probability": 0.85, "coverage_percent": 70},
             "Public_Private_Partnership": {"name": "Municipal Public-Private Partnership (PPP)",
                                            "description": "50% Regional/Municipal green public procurement, 50% private operator equity",

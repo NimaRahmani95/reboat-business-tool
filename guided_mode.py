@@ -241,7 +241,7 @@ def _step_1(scn: dict, report: dict, meta: dict, cbs: dict) -> None:
             _field_guide(
                 "Financing route (how the boat is bought)",
                 "Determines what share of the upfront equipment cost is covered by public grants vs. paid back by the operator.",
-                "Horizon Europe 70% Grant is the project reference; Municipal PPP (50%) and Private Investment (0% grant) test commercial bankability.",
+                "EU / Regional Public Grant (70%, e.g., ERDF, Cohesion Fund, or LIFE) reflects typical island/cohesion co-funding; Municipal PPP (50%) and Private Investment (0% grant) test commercial bankability.",
                 "Changes the equity you must recover (payback & NPV) and the Social Return on Investment (SROI) per public euro.",
             )
             st.selectbox(

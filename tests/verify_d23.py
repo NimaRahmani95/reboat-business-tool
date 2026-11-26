@@ -58,7 +58,7 @@ ISLAND_PRESETS = {
 }
 
 FINANCING_NAMES = {
-    "EU_Grants": "70% grant — Horizon Europe",
+    "EU_Grants": "70% grant — EU / Regional Public Grant (ERDF / LIFE)",
     "Public_Private_Partnership": "50% grant — Municipal PPP",
     "Private_Investment": "0% grant — Private investment",
 }
