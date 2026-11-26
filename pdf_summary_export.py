@@ -219,7 +219,7 @@ def generate_business_summary_pdf(s: dict) -> bytes:
             sel.append(i)
     rws = [(*d, "grp" if i in sel else "") for i, d in enumerate(data[1:], 1)]
     story += [KeepTogether([_heading("Financing routes"),
-              Paragraph("The same plant and operating year under the two financing routes the tool models. "
+              Paragraph("The same plant and operating year under the three financing routes the tool models. "
                         "This summary uses the highlighted route.", _st(8.5, after=3, before=3)),
               _ledger(rws, [4.8 * cm, 1.7 * cm, 2.2 * cm, 2.2 * cm, 2.1 * cm, 2.0 * cm, W - 15.0 * cm], data[0],
                       right_cols=(1, 2, 3, 4, 5, 6))])]

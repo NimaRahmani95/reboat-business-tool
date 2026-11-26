@@ -58,6 +58,7 @@ ISLAND_PRESETS = {
 }
 
 FINANCING_NAMES = {
+    "EU_Grants": "EU / Regional Public Grant",
     "Public_Private_Partnership": "50% grant — Municipal PPP",
     "Private_Investment": "0% grant — Private investment",
 }
@@ -74,7 +75,7 @@ def make_default_scn(island: str, **overrides) -> dict:
     pl = float(p["plastic_base"])
     scn = {
         "target_island": island,
-        "capex_scenario": "Public_Private_Partnership",
+        "capex_scenario": "EU_Grants",
         "op_days": 14,
         "transit_hrs": float(p["transit_base"]),
         "workers": 8,
@@ -214,7 +215,7 @@ def build_export_payloads(scn: dict, eco_params: dict | None = None):
         })
 
     routes = []
-    for key in ("Public_Private_Partnership", "Private_Investment"):
+    for key in ("EU_Grants", "Public_Private_Partnership", "Private_Investment"):
         _, rep_k, r_k = run_scn({**scn, "capex_scenario": key})
         ca = rep_k["CapEx_Allocation"]
         routes.append({
@@ -431,7 +432,7 @@ def verify_all():
     print("1. Verifying 4-island baseline numbers...")
     expected = {
         "Corfu": dict(rev=302029.90, opex=251856.63, ratio=1.20, net=7088.27, be=3.50,
-                      sroi=21.24, sroi_nt=7.22, waste=76.31, muni=11446.56, pl_not=0.0, diesel_co2=10.69),
+                      sroi=15.17, sroi_nt=5.16, waste=76.31, muni=11446.56, pl_not=0.0, diesel_co2=10.69),
         "Paxos": dict(ratio=1.32, net=31946.92, pl_not=0.0),
         "Lipari": dict(ratio=1.21, net=9197.17, pl_not=0.0),
         "Terceira": dict(ratio=1.13, net=-3425.47, pl_not=3.97, diesel_co2=78.98),

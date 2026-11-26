@@ -437,7 +437,7 @@ def generate_business_summary_docx(s: dict) -> bytes:
     doc.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     _heading(doc, "Financing routes")
-    _para(doc, ("The same plant and operating year under the two financing routes the tool models. "
+    _para(doc, ("The same plant and operating year under the three financing routes the tool models. "
                 "This summary uses the highlighted route."), size=9, after=3).paragraph_format.keep_with_next = True
     t = doc.add_table(rows=1, cols=7)
     t.alignment = WD_TABLE_ALIGNMENT.CENTER

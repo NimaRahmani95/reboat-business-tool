@@ -193,6 +193,9 @@ class ReBoatDigitalBrain:
         self.capex_amortization_years = 10
 
         self.capex_financing_scenarios = {
+            "EU_Grants": {"name": "EU / Regional Public Grant",
+                          "description": "EU or regional public capital grant with operator/regional co-financing",
+                          "probability": 0.85, "coverage_percent": 70},
             "Public_Private_Partnership": {"name": "Municipal Public-Private Partnership (PPP)",
                                            "description": "50% Regional/Municipal green public procurement, 50% private operator equity",
                                            "probability": 0.60, "coverage_percent": 50},
@@ -369,7 +372,7 @@ class ReBoatDigitalBrain:
     def calculate_capex_allocation(self, scenario_key):
         scenario = self.capex_financing_scenarios.get(scenario_key)
         if scenario is None:
-            scenario_key = "Public_Private_Partnership"
+            scenario_key = "EU_Grants"
             scenario = self.capex_financing_scenarios[scenario_key]
         gross = self.capex_baseline_eur
         grant = gross * scenario["coverage_percent"] / 100.0
@@ -433,7 +436,7 @@ class ReBoatDigitalBrain:
         """Twelve monthly campaigns of one operating year after the project. Volumes scale with the monthly demand
         multiplier and active days; day-based costs with the season class. Campaign length scales active days."""
         opts = self._opts(config_dict)
-        capex_scenario = config_dict.get("capex_scenario", "Public_Private_Partnership")
+        capex_scenario = config_dict.get("capex_scenario", "EU_Grants")
         capex_res = self.calculate_capex_allocation(capex_scenario)
         monthly_amort = capex_res["annual_amortization_eur"] / 12.0
         campaign_days = float(config_dict.get("campaign_days", REFERENCE_CAMPAIGN_DAYS) or REFERENCE_CAMPAIGN_DAYS)
@@ -627,7 +630,7 @@ class ReBoatDigitalBrain:
     def execute_island_scenario(self, config_dict):
         """Single campaign at the island in high season (format of a pilot stay); results go to the JSON export."""
         opts = self._opts(config_dict)
-        capex_scenario = config_dict.get("capex_scenario", "Public_Private_Partnership")
+        capex_scenario = config_dict.get("capex_scenario", "EU_Grants")
         textile_kg = config_dict.get("textile_processed_kg", config_dict["plastic_processed_kg"] * 0.30)
         operational_days = config_dict["operational_days"]
         rev_res = self.simulate_commercial_yields(config_dict["package_sales"], config_dict["plastic_processed_kg"], textile_kg,
