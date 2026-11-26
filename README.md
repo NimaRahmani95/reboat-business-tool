@@ -20,7 +20,7 @@ The **Digital Tool for Business Plan and Sustainability** evaluates the economic
 
 - **Revenue forecasting**: operator share of eco-tourism packages, upcycled circular products, bulk recycled plastic flakes, bulk textile yarn, and optional municipal gate fees.
 - **Operating costs & break-even**: seasonal crew, harbour berth, maintenance, shore-power electricity, marine transit fuel, optional commercial cost lines, and the exact break-even tourism revenue share (`s*`).
-- **Capital & screening metrics**: three capital-funding routes with screening equity payback and 5- and 10-year net present value.
+- **Capital & screening metrics**: two capital-funding routes (50% Municipal PPP and 0% Private Investment) with screening equity payback and 5- and 10-year net present value.
 - **Island & public sustainability indicators**: plastic and textile mass diverted under machine throughput limits (`100 kg/h` plastic shredding, `0.5 kg/h` textile spinning line), uncompacted landfill airspace saved, avoided municipal disposal cost net of gate fees, local crew wages, prudent social return ratio, and separate operational fuel and electricity tracking ahead of the full life cycle assessment.
 - **Exploratory regional demonstrator (`View 05`)**: illustrative 5 to 10 year archipelago scenarios exploring municipal, tour-operator, and artisan uptake alongside multi-island fleet scheduling and gate-fee trade-offs.
 

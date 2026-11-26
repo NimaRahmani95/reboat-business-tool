@@ -75,7 +75,6 @@ for _isl, _d in ISLAND_DATA.items():
     _d["export_base"] = AVOIDED_DISPOSAL_COST.get(_isl, 150.0)
 
 FINANCING_LABELS = {
-    "EU_Grants": "70% grant — EU / Regional Public Grant (ERDF / LIFE)",
     "Public_Private_Partnership": "50% grant — Municipal PPP",
     "Private_Investment": "0% grant — Private investment",
 }
@@ -139,7 +138,7 @@ if "initialized" not in st.session_state:
             "prod_panel": 15,
             "prod_textile": 40,
             "prod_yarn": 80,
-            "capex_scenario": "EU_Grants",
+            "capex_scenario": "Public_Private_Partnership",
             "proxy_diesel": 1.75,
             "proxy_berth": 300.0,
             "proxy_export": 150.0,
@@ -426,7 +425,7 @@ def reset_all_defaults() -> None:
     st.session_state.update({
         "op_days": 14,
         "workers": 8,
-        "capex_scenario": "EU_Grants",
+        "capex_scenario": "Public_Private_Partnership",
         "price_point": DEFAULT_OPTIONS["price_point"],
         "reboat_share": DEFAULT_OPTIONS["reboat_share_pct"],
         "gate_fee": DEFAULT_OPTIONS["gate_fee_eur_per_t"],
@@ -774,7 +773,7 @@ def _pop(p):
 
 
 def fin_name(key):
-    return _cap.get(key, _cap["EU_Grants"])["name"]
+    return _cap.get(key, _cap["Public_Private_Partnership"])["name"]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1446,7 +1445,7 @@ def summary_payload(fp: str, eco: dict | None = None) -> dict:
     rev_lines = [(lbl, R.get(k, 0)) for k, lbl in PL.visible(PL.REVENUE_LINES, R)]
     opex_lines = [(lbl, R.get(k, 0)) for k, lbl in PL.visible(PL.OPEX_LINES, R)]
     routes = []
-    for key in ("EU_Grants", "Public_Private_Partnership", "Private_Investment"):
+    for key in ("Public_Private_Partnership", "Private_Investment"):
         rep_k, r_k = model_for({**SCN, "capex_scenario": key})
         ca = rep_k["CapEx_Allocation"]
         routes.append(dict(name=_cap[key]["name"], pct=ca["coverage_percent"], grant=ca["grant_coverage_eur"],

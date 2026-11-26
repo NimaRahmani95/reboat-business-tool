@@ -505,8 +505,8 @@ def generate_financial_model_xlsx(m: dict) -> bytes:
             f"=IF({E.ref('grant_y')}>0,({E.ref('freight')}+{E.ref('wages')}+{E.ref('co2v')})/{E.ref('grant_y')},\"n/a\")",
             "Net municipal saving + wages + carbon value ÷ grant per year"], {2: RATIO}, name="sroi2", note_cols=(3,))
 
-    # ── Complete Investment & financing 3-routes comparison table (referencing E) ──
-    F.section("The three financing routes", 9)
+    # ── Complete Investment & financing 2-routes comparison table (referencing E) ──
+    F.section("The two financing routes", 9)
     F.header(["Route", "Grant share", "Grant", "Equity", "Equity payback", "5-year NPV", "10-year NPV", "SROI", "SROI (excl. turn.)"])
     for rt in m["routes"]:
         r = F.row
