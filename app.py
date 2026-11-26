@@ -13,7 +13,7 @@ Release 6.0.0 (D2.3 v1.0 EU Review Readiness):
   • Horizon Europe GA Art. 17.2 / 17.3 EU emblem + European Research Executive Agency (REA) disclaimer on all views & exports.
   • Explicit screening CO2 transparency (Gross waste-transport CO2 avoided vs. indicative transit diesel CO2 & 52 kW load).
   • SROI (excl. turnover) surfaced alongside SROI in View 01/02, financing-route comparison, Excel, PDF & Word.
-  • Illustrative full-cost stress test toggle (Report Table 27) + live Input-linked Excel formulas & Sheet 8.
+  • Illustrative full-cost stress test toggle + live Input-linked Excel formulas & Sheet 8.
 """
 
 import base64
@@ -218,7 +218,7 @@ def apply_island_season_presets():
 
 
 def _toggle_stress_test():
-    """Toggle illustrative unquoted operating costs (Deliverable D2.3 Table 27)."""
+    """Toggle illustrative unquoted operating costs stress test."""
     if st.session_state.get("stress_test"):
         st.session_state.vessel = 200.0
         st.session_state.insurance = 6000.0
@@ -673,7 +673,7 @@ with st.sidebar:
         st.number_input("Recycled yarn (€/kg)", step=0.10, format="%.2f", key="proxy_yarn")
         st.number_input("CapEx baseline (€)", step=1000.0, format="%.0f", key="proxy_capex")
     with st.expander("Other operating costs · default 0"):
-        st.checkbox("Illustrative full-cost stress test (Table 27)", key="stress_test", on_change=_toggle_stress_test,
+        st.checkbox("Illustrative full-cost stress test", key="stress_test", on_change=_toggle_stress_test,
                     help="Loads the illustrative unquoted-cost stress test (€200/day charter, €6,000/yr insurance, "
                          "€30/t land collection, 10% sales commission, 5% overheads).")
         st.number_input("Vessel charter (€/active day)", min_value=0.0, step=50.0, key="vessel")
@@ -689,7 +689,7 @@ with st.sidebar:
         '<span class="eyebrow">Project</span><dl>'
         '<dt>Task</dt><dd>2.6 · D2.3 (M24)</dd><dt>WP</dt><dd>WP2 · POLIMI</dd>'
         '<dt>Grant</dt><dd>101182350</dd><dt>Call</dt><dd>CL6-2024-CIRCBIO-01</dd>'
-        f'<dt>Release</dt><dd>{UI_RELEASE} · MIT</dd></dl></div>'
+        f'<dt>Release</dt><dd>{UI_RELEASE} · All Rights Reserved</dd></dl></div>'
     )
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1079,8 +1079,8 @@ def view_business_plan():
               "looks like once the investment is amortised. Every line below adds up to the totals.")
     if all(SCN.get(k, 0.0) == 0.0 for k in ("vessel", "insurance", "collection", "commission", "overheads")):
         show_note("Unquoted operating costs currently set to €0",
-                  "Vessel charter, insurance, land collection, sales commissions, and overheads default to €0 until partner "
-                  "local commercial quotations are finalised. Enable <em>Illustrative full-cost stress test (Table 27)</em> "
+                  "Vessel charter, insurance, land collection, sales commissions, and overheads default to €0 until local "
+                  "commercial quotations are finalised. Enable <em>Illustrative full-cost stress test</em> "
                   "in the sidebar to evaluate the combined cost impact on coverage and break-even share.",
                   "warn")
     tiles([
@@ -1289,7 +1289,7 @@ def view_ecosystem():
         agent_rows = [
             ("Municipalities (C1, C4)", "Join if avoided disposal cost + EPR + environmental weight ≥ gate fee and awareness exceeds threshold.", t24["waste_inventory"]),
             ("Tour Operators / DMCs (T4.2–4.3)", "Participate when awareness crosses cohort hurdle and ReBoat package share ≤ DMC willingness cap.", t24["mission_params"]),
-            ("Local Artisans & SMEs (C3, KARTU)", "Switch to ReBoat rPET/yarn when price discount vs. virgin (€1.90/kg) and DPP provenance trust qualify.", t24["machinery_catalogue"]),
+            ("Local Artisans & SMEs (C3)", "Switch to ReBoat rPET/yarn when price discount vs. virgin (€1.90/kg) and DPP provenance trust qualify.", t24["machinery_catalogue"]),
             ("Fleet Operator / NewCo (C1–C2)", "Deploy additional boat when unmet peak waste > 5% and cumulative margin headroom covers expansion equity.", t24["boat_envelope"] + " · " + t24["routes"]),
         ]
         html_block(ui.table(

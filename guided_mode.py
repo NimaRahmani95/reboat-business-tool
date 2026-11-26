@@ -152,7 +152,7 @@ def render_guided_sidebar(step: int, island: str, on_exit, on_change_island, log
         html_block(
             '<p class="railhint" style="margin-top:6px">Every number you adjust is saved automatically and carried into all '
             '5 dashboard views and downloadable files.</p>'
-            f'<p class="railhint">Release {esc(ui_release)} · MIT</p>'
+            f'<p class="railhint">Release {esc(ui_release)} · All Rights Reserved (see LICENSE)</p>'
         )
 
 

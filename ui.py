@@ -604,5 +604,5 @@ def table(head, rows, plane: bool = False) -> str:
 def eu_footer(eu_logo_html: str, disclaimer: str) -> None:
     """Render mandatory Horizon Europe GA Art. 17.2/17.3 EU emblem and disclaimer."""
     html_block(f'<footer class="eu-foot" aria-label="EU funding acknowledgement">{eu_logo_html}'
-               f'<p><strong>Horizon Europe Grant Agreement No. 101182350 (ReBoat) · MIT License (software)</strong><br>'
+               f'<p><strong>Horizon Europe Grant Agreement No. 101182350 (ReBoat) · All Rights Reserved (Permission Required — see LICENSE)</strong><br>'
                f'{esc(disclaimer)}</p></footer>')
