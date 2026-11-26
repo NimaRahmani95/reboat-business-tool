@@ -1,0 +1,53 @@
+# ReBoat Digital Tool for Business Plan and Sustainability Evaluation — Streamlit theme
+# Streamlit reads this file from the directory you launch `streamlit run` in,
+# so start the app from app/ (run_reboat_local.bat does this for you).
+# headless = true is required on Streamlit Community Cloud; run_reboat_local.bat passes --server.headless false locally.
+# Colours follow the ReBoat logo: sky-blue ground, ink type, logo blue #34799E.
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "light"
+font = "IBM Plex Sans:https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap, sans-serif"
+headingFont = "Archivo:https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&display=swap, sans-serif"
+codeFont = "IBM Plex Mono:https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap, monospace"
+baseFontSize = 14
+baseRadius = "10px"
+buttonRadius = "999px"
+showWidgetBorder = true
+chartCategoricalColors = ["#009b80", "#a88216", "#0089c4", "#c9444a", "#5d64c7"]
+
+[theme.light]
+primaryColor = "#1C1C1A"
+backgroundColor = "#B4D4E6"
+secondaryBackgroundColor = "#E6F1F6"
+textColor = "#0F1A1F"
+borderColor = "#A9C9DA"
+linkColor = "#1F5F82"
+chartCategoricalColors = ["#009b80", "#a88216", "#0089c4", "#c9444a", "#5d64c7"]
+
+[theme.light.sidebar]
+backgroundColor = "#F4F9FB"
+secondaryBackgroundColor = "#E6F1F6"
+borderColor = "#C9DEE8"
+
+[theme.dark]
+primaryColor = "#7CC0E4"
+backgroundColor = "#0B1620"
+secondaryBackgroundColor = "#182A35"
+textColor = "#EAF2F6"
+borderColor = "#284352"
+linkColor = "#7CC0E4"
+chartCategoricalColors = ["#009b80", "#a88216", "#0089c4", "#c9444a", "#5d64c7"]
+
+[theme.dark.sidebar]
+backgroundColor = "#13212A"
+secondaryBackgroundColor = "#182A35"
+borderColor = "#284352"

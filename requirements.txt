@@ -1,0 +1,8 @@
+# ReBoat T2.6 — Digital Tool for Business Plan and Sustainability Evaluation
+# Tested with Python 3.11 and the versions below.
+streamlit>=1.50,<2
+plotly>=5.20,<8
+python-docx>=1.1,<2
+openpyxl>=3.1,<4
+matplotlib>=3.7,<4
+reportlab>=4.0

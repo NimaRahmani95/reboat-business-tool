@@ -1,0 +1,42 @@
+All Rights Reserved — Permission Required Software License
+
+Copyright (c) 2026 Politecnico di Milano (POLIMI) and the ReBoat Consortium.
+All rights reserved.
+
+This repository contains the source code and supporting assets of the ReBoat
+"Digital Tool for Business Plan and Sustainability" developed under Task 2.6
+(Deliverable D2.3) of the Horizon Europe project ReBoat (Grant Agreement No.
+101182350, Call HORIZON-CL6-2024-CIRCBIO-01).
+
+Public Visibility vs. Usage Rights
+----------------------------------
+The source code and documentation in this repository are made publicly viewable
+solely for transparency, inspection, and review in connection with public
+Deliverable D2.3. Public access to this repository does NOT grant any licence
+or right to use, execute, copy, modify, merge, publish, distribute, sublicense,
+host, deploy, or create derivative works from this software or application.
+
+Permission Requirement
+----------------------
+Any use of the source code or the hosted/local application—whether for
+non-commercial research, educational, municipal, or commercial purposes—
+requires prior written permission from Politecnico di Milano (POLIMI) on behalf
+of the ReBoat Consortium.
+
+To request permission or licensing terms, please contact the ReBoat Project
+Coordinator (Politecnico di Milano, Department of Mechanical Engineering) via
+the official ReBoat project channels.
+
+Grant Agreement Rights
+----------------------
+Nothing in this licence restricts the rights of the European Union, the
+European Commission, or the European Research Executive Agency (REA) under
+Horizon Europe Grant Agreement No. 101182350.
+
+Disclaimer of Warranty
+----------------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR ITS USE.

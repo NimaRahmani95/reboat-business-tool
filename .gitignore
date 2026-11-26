@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+# superseded files kept locally, not part of the published tool
+app_v3.3.0_original.py
+business_plan_export.py
+excel_export.py
+assets/chart_*.png
+assets/diagram_process_flow.png
+assets/reboat_vessel_bg.jpg
+assets/vessel_plate.jpg
+_to_delete/
+_backup*/
